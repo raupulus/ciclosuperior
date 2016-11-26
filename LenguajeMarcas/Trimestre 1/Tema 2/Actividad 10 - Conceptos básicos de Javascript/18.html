@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="myInput" type="text" value="Tutti Frutti">
+<button onclick="checkFruit()">Check Fruit</button>
+<p id="demo"></p>
+
+<script>
+function checkFruit() {
+  var text;
+  var fruits = document.getElementById("myInput").value;
+
+  switch(fruits) {
+    case "Banana":
+      text = "Las bananas están bien!";
+      break;
+    case "Orange":
+      text = "No soy fan de las naranjas";
+      break;
+    case "Apple":
+      text = "¿Como te gustan las manzanas?";
+      break;
+
+    // add the default keyword here
+    default:
+      text = "Nunca he oído hablar de esa fruta";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
