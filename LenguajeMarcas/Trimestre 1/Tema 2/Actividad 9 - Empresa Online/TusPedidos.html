@@ -6,29 +6,41 @@
 	</HEAD>
 
 	<BODY>
-		<TABLE border="1" width="100%" height="600px" cellspacing="0"><!--Tabla General-->
+		<TABLE border="1" cellspacing="0" align="center"><!--Tabla General-->
+<!--FORMULARIO-->
 			<TR>
-<!--Titulo-->
-				<TD align="center" height="120px" background="./images/fondo.jpg"><!--Titulo-->
-					<H1><FONT color="red" size="7">La Batidora</FONT></H1>
-				</TD>
-
-<!--DERECHA-->
-				<TD width="30%" align="center" rowspan="2"  background="./images/fondo.jpg">
-					<TABLE height="100%" border="0" cellspacing="60" cellpading="0" align="center">
-						<TR><TD align="center"><A href="./1.html" target="cambiarIframe"><FONT color="#008927" size="5">¿Quienes Somos?</FONT></A></TD></TR>
-						<TR><TD align="center"><A href="./1.html" target="cambiarIframe"><FONT color="#008927" size="5">Nuestros Productos</FONT></A></TD></TR>
-						<TR><TD align="center"><A href="./1.html" target="cambiarIframe"><FONT color="#008927" size="5">Tus Pedidos</FONT></A></TD></TR>
-						<TR><TD align="center"><A href="./1.html" target="cambiarIframe"><FONT color="#008927" size="5">Datos de Contacto</FONT></A></TD></TR>
-					</TABLE>
+				<TD align="center">
+					<STRONG><FONT color="red" size="7">Aviso!!!</FONT></STRONG>
+					<BR/>
+					<STRONG>Si deseas realizar pedidos es necesario un registro previo</STRONG> <A href="#" title="registro"><FONT color="blue" size="5">Regístrate</FONT></A>
+					<HR/>
 				</TD>
 			</TR>
 
-<!--IFRAME-->
-			<TR align="center">
-				<TD align="center" height="100%" background="./images/fondoFrame.jpg">
-					<IFRAME src="./ndex.html" name="cambiarIframe" width="100%" height="100%">No se puede cargar IFRAMES</IFRAME>
-				</TD>	
+<!--FORMULARIO-->
+			<TR>
+				<TD>
+					<H3 align="center">Tu pedido</H3>
+					<HR/>
+					<FORM name="formulario" method="GET">
+						<DIV>
+							<LABEL for="usuario">Usuario:</LABEL><!--Usuario-->
+							<INPUT type="text" name="usuario" id="usuario"/>
+						</DIV>
+						
+						<BR/>
+						
+						<DIV>
+							<LABEL for="contraseña">Contraseña:</LABEL><!--Clave-->
+							<INPUT type="password" name="contraseña" id="contraseña"/>
+							<INPUT type="button" value="Rellenar Datos" name="rellenar_datos"/>
+						</DIV>
+						
+						<HR/>
+						
+						<H3>Datos del Cliente</H3>
+					</FORM>
+				</TD>
 			</TR>
 		</TABLE>
 	</BODY>
