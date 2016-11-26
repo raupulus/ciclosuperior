@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<HTML lang="es">
+	<HEAD>
+		<TITLE>Validar Formulario</TITLE>
+		<META charset="utf-8"/>
+		<SCRIPT src="./JS/scripts.js"></SCRIPT>
+	</HEAD>
+
+	<BODY>
+		<FORM>
+			<TABLE width="100%" align="center">
+				<TR>
+					<TD>
+						<H1 align="center">Validar datos de un coche</H1>
+						<H2 align="center">Introduce el coche</H2>
+						<P>Marcas permitidas: "seat", "renault" y "citroen"</P>
+						<P>Modelos permitidos hasta 25 caracteres</P>
+						<P>Colores entre estos: "blanco, negro, rojo, verde, azul"</P>
+						<P>Tara: Número entre 500 y 3000 KG</P>
+						<P>Precio: entre 1000 y 15000 Euros</P>
+						<HR size="3" color="gray"/>
+					</TD>
+				</TR>
+				
+				<TR>
+					<TD>
+						Marca: <INPUT type="text" name="marca" size="30"/>
+						<BR/>
+						Modelo <INPUT type="text" name="modelo" size="30"/>
+						<BR/>
+						Color <INPUT type="text" name="color" size="30"/>
+						<BR/>
+						Tara <INPUT type="text" name="tara" size="30"/>Kg
+						<BR/>
+						Precio <INPUT type="text" name="precio" size="30"/>€
+					</TD>
+				</TR>
+				
+				<TR>
+					<TD align="center">
+						<INPUT type="reset" name="borrar" value="Borrar"/>
+						<INPUT type="button" name="vali" value="Validar" onClick="validar(this.form)"/>
+					</TD>
+				</TR>
+			</TABLE>
+		</FORM>
+	</BODY>
+</HTML>
