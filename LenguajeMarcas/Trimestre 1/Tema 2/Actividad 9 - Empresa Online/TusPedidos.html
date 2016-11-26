@@ -6,13 +6,13 @@
 	</HEAD>
 
 	<BODY>
-		<TABLE border="1" cellspacing="0" align="center"><!--Tabla General-->
-<!--FORMULARIO-->
+		<TABLE border="1" cellspacing="0" align="center" bgcolor="#e3fce6"><!--Tabla General-->
+<!--Aviso-->
 			<TR>
 				<TD align="center">
 					<STRONG><FONT color="red" size="7">Aviso!!!</FONT></STRONG>
 					<BR/>
-					<STRONG>Si deseas realizar pedidos es necesario un registro previo</STRONG> <A href="#" title="registro"><FONT color="blue" size="5">Regístrate</FONT></A>
+					<STRONG>Si deseas realizar pedidos es necesario un registro previo</STRONG> <A href="./registro.html" title="registro"><FONT color="blue" size="5">Regístrate</FONT></A>
 					<HR/>
 				</TD>
 			</TR>
@@ -33,12 +33,88 @@
 						<DIV>
 							<LABEL for="contraseña">Contraseña:</LABEL><!--Clave-->
 							<INPUT type="password" name="contraseña" id="contraseña"/>
-							<INPUT type="button" value="Rellenar Datos" name="rellenar_datos"/>
+							<INPUT type="button" name="rellenar_datos" value="Rellenar Datos" id="rellenar_datos"/>
+						</DIV>
+						
+						<HR/>
+
+<!--Datos de Cliente-->
+						<H3>Datos del Cliente</H3>
+						<DIV>
+							<LABEL for="dni">DNI:</LABEL><!--DNI-->
+							<INPUT type="text" name="dni" id="dni"/>
+						</DIV>
+						<DIV>
+							<LABEL for="nombre_propio">Nombre:</LABEL><!--Nombre-->
+							<INPUT type="text" name="nombre_propio" id="nombre_propio"/>
+						</DIV>
+						<DIV>
+							<LABEL for="apellidos">Apellidos:</LABEL><!--Apellidos-->
+							<INPUT type="text" name="apellidos" id="apellidos"/>
+						</DIV>
+						<DIV>
+							<LABEL for="direccion">Dirección:</LABEL><!--Dirección-->
+							<INPUT type="text" name="direccion" id="direccion"/>
+						</DIV>
+						<DIV>
+							<LABEL for="email">Email:</LABEL><!--Email-->
+							<INPUT type="email" name="email" id="email"/>
+						</DIV>
+						<DIV>
+							<LABEL for="fax">Fax:</LABEL><!--Fax-->
+							<INPUT type="text" name="fax" id="fax"/>
+						</DIV>
+						<DIV>
+							<LABEL for="nacionalidad">Nacionalidad:</LABEL><!--Nacionalidad-->
+							<SELECT type="text" name="nacionalidad" id="nacionalidad">
+								<OPTION value="spain">España</OPTION>
+								<OPTION value="other">Extranjero</OPTION>
+							</SELECT>
 						</DIV>
 						
 						<HR/>
 						
-						<H3>Datos del Cliente</H3>
+<!--Detalles del pedido-->
+						<H3>Detalles del pedido</H3>
+						<DIV align="center">
+							<TEXTAREA name="detalles_pedido" id="detalles_pedido" rows="10" cols="50">Describe aquí los productos que solicita...</TEXTAREA>
+						</DIV>
+						
+						<HR/>
+
+<!--Formas de envío-->
+						<DIV>
+							<H3>Forma de Envío</H3>
+							<INPUT type="radio" checked value="envio_postal" name="envio" id="envio"/>Correo Postal (7 días sin gastos de envío)
+							<BR/>
+							<INPUT type="radio" value="envio_mensajeria" name="envio" id="envio"/>Mensajería (2 días, 10€ de gastos de envío)
+						</DIV>
+						
+						<HR/>
+						
+<!--Formas de pago-->
+						<DIV>
+							<H3>Forma de Pago</H3>
+							<INPUT type="radio" value="pago_reembolso" name="pago" id="envio"/>Contra Reembolso
+							<BR/>
+							<INPUT type="radio" checked value="pago_tarjeta" name="pago" id="pago"/>A través de tarjeta
+						</DIV>
+						
+						<HR/>
+
+<!--Observaciones-->
+						<H3>Observaciones</H3>
+						<DIV align="center">
+							<TEXTAREA name="observaciones" id="observaciones" rows="10" cols="50">Escribe aquí cualquier otra información que necesitemos conocer...</TEXTAREA>
+						</DIV>
+						
+						<HR/>
+						
+						<DIV align="center">
+							<INPUT type="submit" value="Enviar"/>
+							<INPUT type="reset" value="Borrar"/>
+						</DIV>
+						<BR/>
 					</FORM>
 				</TD>
 			</TR>
