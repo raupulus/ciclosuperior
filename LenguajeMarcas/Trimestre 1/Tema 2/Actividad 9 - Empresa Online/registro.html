@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<HTML lang="es">
+	<HEAD>
+		<TITLE>Empresa Online</TITLE>
+		<META charset="utf-8"/>
+	</HEAD>
+
+	<BODY>
+		<TABLE border="0" width="100%" cellspacing="0" align="center"><!--Tabla General-->
+			<TR>
+				<TD width="60%" align="right">
+					<FORM name="nuevo_formulario" method="GET">
+						<!--Datos de Cliente-->
+						<H3>Registro del Cliente</H3>
+						<DIV>
+							<LABEL for="dni">DNI:</LABEL><!--DNI-->
+							<INPUT type="text" name="dni" id="dni"/>
+						</DIV>
+						<DIV>
+							<LABEL for="nombre_propio">Nombre:</LABEL><!--Nombre-->
+							<INPUT type="text" name="nombre_propio" id="nombre_propio"/>
+						</DIV>
+						<DIV>
+							<LABEL for="apellidos">Apellidos:</LABEL><!--Apellidos-->
+							<INPUT type="text" name="apellidos" id="apellidos"/>
+						</DIV>
+						<DIV>
+							<LABEL for="direccion">Dirección:</LABEL><!--Dirección-->
+							<INPUT type="text" name="direccion" id="direccion"/>
+						</DIV>
+						<DIV>
+							<LABEL for="telefono">Teléfono</LABEL><!--Teléfono-->
+							<INPUT type="text" name="telefono" id="telefono"/>
+						</DIV>
+						<DIV>
+							<LABEL for="email">Email:</LABEL><!--Email-->
+							<INPUT type="email" name="email" id="email"/>
+						</DIV>
+						<DIV>
+							<LABEL for="fax">Fax:</LABEL><!--Fax-->
+							<INPUT type="text" name="fax" id="fax"/>
+						</DIV>
+						<DIV>
+							<LABEL for="nacionalidad">Nacionalidad:</LABEL><!--Nacionalidad-->
+							<SELECT type="text" name="nacionalidad" id="nacionalidad">
+								<OPTION value="spain">España</OPTION>
+								<OPTION value="other">Extranjero</OPTION>
+							</SELECT>
+						</DIV>
+						<DIV>
+							<LABEL for="credit_card">Tipo de tarjeta:</LABEL><!--Tipo de tarjeta de Crédito-->
+							<SELECT type="text" name="credit_card" id="credit_card">
+								<OPTION value="card_visa">VISA</OPTION>
+								<OPTION value="card_other">OTRA</OPTION>
+							</SELECT>
+							<LABEL for="num_card">Nº de la tarjeta:</LABEL><!--Nº de la tarjeta-->
+							<INPUT type="text" name="num_card" id="num_card"/>
+						</DIV>
+						<DIV>
+							<LABEL for="usuario">Usuario:</LABEL><!--Usuario-->
+							<INPUT type="text" name="usuario" id="usuario"/>
+						</DIV>
+						<DIV>
+							<LABEL for="contraseña">Contraseña:</LABEL><!--Clave-->
+							<INPUT type="password" name="contraseña" id="contraseña"/>
+						</DIV>
+						<DIV align="right">
+							<TEXTAREA name="observaciones" id="observaciones" rows="10" cols="50">Especifique cualquier información que necesitemos conocer...</TEXTAREA>
+						</DIV>
+						
+						<HR/>
+						
+						<DIV align="right">
+							<INPUT type="submit" value="Enviar"/>
+							<INPUT type="reset" value="Borrar"/>
+						</DIV>
+						<BR/>
+					</FORM>
+				</TD>
+
+<!--Nueva celda para alinear-->
+				<TD width="40%"></TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>
