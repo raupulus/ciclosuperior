@@ -11,11 +11,25 @@ H1 {
 	letter-spacing: 15px;
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 3em;
+	font-size: 4em;
 }
-H1 {
+H2 {
 	border: 1px solid red;
 	text-decoration: underline;
 	letter-spacing: 3px;
+	font-size: 3em;
+}
+H3 {
+	font-family: verdana;
+	letter-spacing: 2px;
 	font-size: 2em;
+}
+H4 {
+	font-family: courier;
+	font-style: italic;
+}
+H5 {
+	font-family: "century gothic";
+	font-style: oblique;
+	font-size: small;
 }
