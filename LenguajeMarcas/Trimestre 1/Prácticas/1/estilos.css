@@ -1,0 +1,49 @@
+BODY {
+				color: blue;
+				text-align: center;
+				background: black;
+			}
+			
+			H1 {
+				color: red;
+				font-size: xx-large;
+				background: black;
+				font-family: arial;
+			}
+			
+			H2 {
+				color: orange;
+				font-size: x-large;
+				font-family: courier;
+			}
+			
+			H3 {
+				color: green;
+				font-size: large;
+				font-family: verdana;
+			}
+			H4 {
+				color: #200000;
+				font-size: medium;
+				font-family: helvetica;
+			}
+			
+			H5 {
+				color: #008080;
+				font-size: small;
+				font-family: sans-serif;
+			}
+			H6 {
+				color: #005000;
+				font-size: x-small;
+				font-family: times;
+			}
+			
+			A:link {
+				color: red;
+				font-size: xx-small;
+			}
+			A:visited {
+				color: white;
+				font-size: xx-large;
+			}
