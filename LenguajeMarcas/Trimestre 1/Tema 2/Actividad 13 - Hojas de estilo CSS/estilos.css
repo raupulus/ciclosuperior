@@ -33,3 +33,26 @@ H5 {
 	font-style: oblique;
 	font-size: small;
 }
+A {
+	color:purple;
+}
+A:visited {
+	color:  black;
+}
+A:hover {
+	color: white;
+}
+LI {
+	color:orange;
+}
+IMG {
+	width: 300px;
+	height: 300px;
+	border:3px double red;
+}
+TABLE {
+	background-color: purple;
+	border: 3px solid red;
+	text-align: center;
+	margin: auto;
+}
