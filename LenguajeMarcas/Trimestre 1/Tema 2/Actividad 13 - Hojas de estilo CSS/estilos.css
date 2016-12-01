@@ -6,3 +6,16 @@ BODY {
 	text-align: center;
 }
 
+H1 {
+	border: 2px double red;
+	letter-spacing: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 3em;
+}
+H1 {
+	border: 1px solid red;
+	text-decoration: underline;
+	letter-spacing: 3px;
+	font-size: 2em;
+}
