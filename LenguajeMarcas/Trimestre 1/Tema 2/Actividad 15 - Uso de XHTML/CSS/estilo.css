@@ -1,0 +1,20 @@
+BODY {
+	background-color: #E6E6FA;
+	font-family: arial;
+	color: #800080;
+	text-align: justify;
+	line-height: 24px;
+	word-spacing: 24px;
+}
+H1 {
+	color: #4169E1;
+	text-align: center;
+}
+A {
+	color: darkviolet;
+}
+A:visited {
+	color: grey;
+}
+
+
