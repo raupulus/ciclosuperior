@@ -1,2 +1,45 @@
+BODY {
+	background-color: black;
+	font-family: century;
+	font-weight: bolder;
+	text-align: justify;
+}
 
+DIV.titulos H1 {
+	letter-spacing: 4px;
+	word-spacing: 12px;
+	text-transform: uppercase;
+	color: red;
+	text-align: center;
+	font-size: xx-large;
+}
 
+DIV.titulos H2 {
+	letter-spacing: 8px;
+	word-spacing: 24px;
+	color: red;
+	text-align: center;
+	font-size: x-large;
+}
+
+DIV.titulos H3 {
+	letter-spacing: 2px;
+	color: red;
+	text-align: center;
+	font-size: large;
+}
+
+DIV.titulos H4 {
+	letter-spacing: 6px;
+	color: purple;
+	text-align: center;
+	text-decoration: underline;
+	font-size: medium;
+}
+
+DIV.titulos H5 {
+	letter-spacing: 18px;
+	color: purple;
+	text-align: center;
+	font-size: small;
+}
