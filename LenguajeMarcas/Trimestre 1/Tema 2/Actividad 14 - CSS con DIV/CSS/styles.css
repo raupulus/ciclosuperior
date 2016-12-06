@@ -43,3 +43,30 @@ DIV.titulos H5 {
 	text-align: center;
 	font-size: small;
 }
+
+DIV.links {
+	text-align: center;
+}
+
+DIV.links A {
+	color: red;
+}
+DIV.links A:visited {
+	color: purple;
+}
+DIV.links A:hover {
+	color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
