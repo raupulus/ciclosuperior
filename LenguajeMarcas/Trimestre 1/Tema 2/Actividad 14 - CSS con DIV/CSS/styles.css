@@ -58,6 +58,13 @@ DIV.links A:hover {
 	color: gray;
 }
 
+DIV.imagen {
+	margin-top: 20px;
+	text-align: center;
+}
+DIV.imagen IMG {
+	border: 3px solid purple;
+}
 
 
 
