@@ -1,1 +1,6 @@
-avion
+
+elefante
+lagarto
+rodaballo
+flauta
+casco
