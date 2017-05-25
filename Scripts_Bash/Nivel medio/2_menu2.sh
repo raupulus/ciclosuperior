@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#######################################
+# ###     Raúl Caro Pastorino     ### #
+## ##                             ## ##
+### # https://github.com/fryntiz/ # ###
+## ##                             ## ##
+# ###       www.fryntiz.es        ### #
+#######################################
+
 function copiar() {
 	echo "Introduce directorio a copiar"
 	read dir1

@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#######################################
+# ###     Raúl Caro Pastorino     ### #
+## ##                             ## ##
+### # https://github.com/fryntiz/ # ###
+## ##                             ## ##
+# ###       www.fryntiz.es        ### #
+#######################################
+
 if [ $# != 1 ]; then
 	echo "Número de parámetros incorrecto, solo necesito 1 archivo"
 	exit 1

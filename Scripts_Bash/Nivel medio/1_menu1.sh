@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#######################################
+# ###     Raúl Caro Pastorino     ### #
+## ##                             ## ##
+### # https://github.com/fryntiz/ # ###
+## ##                             ## ##
+# ###       www.fryntiz.es        ### #
+#######################################
+
 function opciones() {
 	echo "1) Crear archivo con el contenido de otro"
 	echo "2) Crear un directorio y dentro crear otro"
