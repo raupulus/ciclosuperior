@@ -2,22 +2,11 @@
 TMP=$1
 MODULO=""
 
-if [ $1 < 100 ] && [ $# = 1 ]; then
-	while [ $TMP < 100 ];
-		do
-			if [ $TMP -lt 101 ];
-				then break
-			fi
-
-			TMP=$(($TMP/101))
-			MODULO=$(($TMP%101))
-
-			echo "a $TMP"
-			echo "b $MODULO"
-		done
-
+if [ $# = 1 ]; then
+	if [ $1 < 100 ]
+	echo "Es menor de 101 y existe parametro de entrada"
 else
-	echo "El número introducido es inválido o menor de 101"
+	echo "Se necesita un número como parámetro"
 	echo "Sintaxis: script.sh valor"
 	exit 1
 fi
