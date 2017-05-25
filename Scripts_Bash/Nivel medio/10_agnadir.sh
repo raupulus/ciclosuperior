@@ -11,8 +11,13 @@
 function leeme() {
 	while read line
 	do
-		echo “$line”
-	done <$1
+		read input
+		if [ $input = "fin" ] || [ $input = "FIN" ]; then
+			break
+		else
+			echo $input >> $1
+		fi
+	done
 }
 
 if [ $# -eq 1 ] && [ -f $1 ]; then
