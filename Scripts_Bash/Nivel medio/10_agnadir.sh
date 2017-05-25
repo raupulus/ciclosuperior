@@ -8,10 +8,20 @@
 # ###       www.fryntiz.es        ### #
 #######################################
 
-if [ $# -eq 1 ]; then
+function leeme() {
+	while read line
+	do
+		echo “$line”
+	done <$1
+}
 
-elif [ $# -eq 2 ]; then
-
+if [ $# -eq 1 ] && [ -f $1 ]; then
+	echo "Recibe un parámetro"
+	leeme
+elif [ $# -eq 2 ] && [ -f $1 ] && [ -f $2 ]; then
+	echo "Recibe dos parámetros"
+	leeme
+	cat $1 >> $2
 else
-	echo "Número de parámetros erróneos"
+	echo "Número de parámetros erróneos o no existen los archivos"
 fi
