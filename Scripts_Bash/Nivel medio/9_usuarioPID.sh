@@ -8,6 +8,7 @@
 # ###       www.fryntiz.es        ### #
 #######################################
 
+# Se puede utilizar la variable UID pero da problemas si cambias de usuario por ejemplo
 miUID=`id | cut -d "=" -f2 | cut -d "(" -f1`
 
 if [ $# -ne 0 ]; then
