@@ -8,7 +8,7 @@
 # ###       www.fryntiz.es        ### #
 #######################################
 
-#
+# Este script contará las líneas de todos los archivos del directorio
 
 TOTAL=0 
 SUMADOR=0
