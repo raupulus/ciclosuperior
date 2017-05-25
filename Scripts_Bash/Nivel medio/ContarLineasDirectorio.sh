@@ -11,13 +11,16 @@
 # Este script contará las líneas de todos los archivos del directorio
 
 TOTAL=0 
-SUMADOR=0
 
-#Muestra todas las líneas de cada archivo
-TMP=(`find  -type f -exec wc -l {} \; | cut -d " " -f 1`)
+#Cuenta todas las líneas y las agrego a un array
+TMP=`find  -type f -exec wc -l {} \; | cut -d " " -f 1`
 
-#TOTAL=`wc -w $TMP`
+#Bucle para recorrer todos los valores de $TMP
+for i in $TMP; do
+	TOTAL=$(( $TOTAL + $i ))
+done
 
-echo $TMP
+#Mostrar resultado
+echo "El total es $TOTAL"
 
-#echo $TOTAL
+exit 0
