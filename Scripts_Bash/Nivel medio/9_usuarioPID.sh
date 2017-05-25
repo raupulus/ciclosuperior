@@ -10,7 +10,7 @@
 
 miUID=`id | cut -d "=" -f2 | cut -d "(" -f1`
 
-if [ $# -ne 1 ]; then
+if [ $# -ne 0 ]; then
 	echo "Error en el número de parámetros pasados"
 	exit 1
 fi
@@ -29,6 +29,7 @@ do
 	else
 		echo "Error no expecificado"
 		exit 1
+	fi
 done
 
 exit 0
