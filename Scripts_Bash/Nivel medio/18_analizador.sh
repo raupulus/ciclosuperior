@@ -15,7 +15,8 @@
 # 2. Mostrar nombre y tamaño
 # 3. Siguiente parámetro.
 
-REPETIR=true
+TMP=""
+ACTUAL=""
 
 function menu() {
 	echo "1. Comprobar si existe en el directorio actual"
@@ -24,32 +25,40 @@ function menu() {
 }
 
 function comprobar() {
+	if [ -f $ACTUAL ]; then
+		echo "El archivo $ACTUAl existe"
+	else
+		echo "El archivo $ACTUAL no existe"
+	fi
+}
 
+function mostrar() {
+	TMP=`du -b $ACTUAL`
+	TMP=`echo $TMP | tr -s " " | cut -d " " -f 1`
+	
+	echo "El archivo $ACTUAL tiene un tamaño de $TMP bytes"
 }
 
 for i in $*; do
-	TMP=`du -b $i`
-	TMP=`echo $TMP | tr -s " " | cut -d " " -f 1`
+	ACTUAL=$i
 	
-	while $REPETIR; do
-		echo "Estás tratando con el archivo $i"
+	clear
+	
+	while true; do
+		echo "Estás tratando con el archivo $ACTUAL"
 		echo ""
 		menu
 		
 		read input
 
 		case $input in
-			1) ;;
-			*) echo "No se ha borrado $i";;
+			1) comprobar;;
+			2) mostrar;;
+			3) break;;
+			*) echo "Parámetro no entendido";;
 		esac
 	done
-	if [ -f $i ]; then
-		
-
-	else
-		echo "Error, no se procesa el argumento: $i"
-	fi
+	
 done
-
 
 exit 0
