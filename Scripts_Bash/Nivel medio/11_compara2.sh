@@ -16,14 +16,25 @@
 # parámetro, junto con su nombre.
 
 MAYOR=`echo $1`
+ELE=false
+
+if [ `echo $1` = "-l" ]; then
+	shift 1
+	MAYOR=`echo $1`
+	ELE=true
+fi
 
 for i in $*; do
-	echo $i
-	if [ `wc -l $i | cut -d " " -f1` -gt `wc -l $MAYOR | cut -d " " -f1` ]; then
+	if [ $ELE ]; then
+		echo `wc -l $i`
+		if [ `wc -l $i | cut -d " " -f1` -gt `wc -l $MAYOR | cut -d " " -f1` ]; then
+			MAYOR=$i
+		fi
+	elif [ `wc -l $i | cut -d " " -f1` -gt `wc -l $MAYOR | cut -d " " -f1` ]; then
 		MAYOR=$i
 	fi
 done
 
-echo "El archivo mayor es: $MAYOR con un total de `wc -l $MAYOR | cut -d " " -f1` Líneas"
+echo "El archivo mayor es $MAYOR con un total de `wc -l $MAYOR | cut -d " " -f1` Líneas"
 
 exit 0
