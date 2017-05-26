@@ -45,9 +45,14 @@ function copiar() {
 		cp $arch1 $arch2
 		if [ -f $arch2 ]; then
 			echo "Se ha copiado el archivo"
+			continuar
+		else
+			echo "Ha ocurrido un error al copiar el archivo $arch1"
+			continuar
 		fi
 	else
 		echo "No se ha copiado el archivo"
+		continuar
 	fi
 }
 
@@ -64,9 +69,14 @@ function mover() {
 		mv $arch1 $arch2
 		if [ ! -f $arch1 ] && [ -f $arch2 ]; then
 			echo "Se ha movido el archivo"
+			continuar
+		else
+			echo "No se ha logrado mover $arch1"
+			continuar
 		fi
 	else
 		echo "No se ha movido el archivo"
+		continuar
 	fi
 }
 
@@ -83,9 +93,14 @@ function renombrar() {
 		mv $arch1 $arch2
 		if [ ! -f $arch1 ] && [ -f $arch2 ]; then
 			echo "Se ha renombrar el archivo"
+			continuar
+		else
+			echo "No se ha logrado renombrar"
+			continuar
 		fi
 	else
 		echo "No se ha renombrar el archivo"
+		continuar
 	fi
 }
 
@@ -99,11 +114,14 @@ function borrar() {
 		rm $arch1
 		if [ ! -f $arch1 ]; then
 			echo "Se ha borrado el archivo"
+			continuar
 		else
 			echo "No se ha conseguido borrar el archivo"
+			continuar
 		fi
 	else
 		echo "No se ha borrado el archivo"
+		continuar
 	fi
 }
 
