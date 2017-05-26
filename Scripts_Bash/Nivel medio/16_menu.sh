@@ -16,13 +16,20 @@
 # 6. Salir
 
 function menu() {
-	echo 1. Copiar un archivo a otro directorio
-	echo 2. Mover un archivo a otro directorio
-	echo 3. Cambiar de nombre a un archivo
-	echo 4. Borrar archivo
-	echo 6. Salir
+	clear
+	echo ""
+	echo "1. Copiar un archivo a otro directorio"
+	echo "2. Mover un archivo a otro directorio"
+	echo "3. Cambiar de nombre a un archivo"
+	echo "4. Borrar archivo"
+	echo "6. Salir"
+	echo ""
+	echo "Introduce una opción del menú"
 }
 
 while true; do
-	echo "entra"
+	menu
+	read input
 done
+
+exit 0
