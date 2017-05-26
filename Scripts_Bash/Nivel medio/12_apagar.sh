@@ -14,3 +14,19 @@
 #   como segundo parámetro)
 # Si el usuario no escribe ningún parámetro entonces nos mostrará las listas
 # de opciones.
+
+ELE=false
+TIEMPO=""
+
+if [ `echo $1` = "-l" ] && [ `echo $2` = "-n" ] && [ $# -eq 3 ]; then
+	ELE=true
+	TIEMPO=$3
+	echo "Se cumple"
+elif [ `echo $1` = "-l" ];
+	echo "Se cumple2"
+else
+	echo "Ninguna"
+fi
+
+
+exit 0
