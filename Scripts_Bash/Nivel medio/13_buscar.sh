@@ -18,4 +18,4 @@ LOG=archivos_peligrosos.txt
 find / -type f -perm -007 2>> /dev/null >> $LOG
 
 echo ""
-echo "Existen `wc -l $LOG` archivos en reiesgos, consulta cuales son en el archivo $LOG"
+echo "Existen `wc -l $LOG` archivos en riesgos, consulta cuales son en el archivo $LOG"
