@@ -15,27 +15,29 @@
 # Si el usuario no escribe ningún parámetro entonces nos mostrará las listas
 # de opciones.
 
-ELE=false
 TIEMPO=""
 
 function ayuda() {
 	echo ""
 	echo "-n Reinicia el equipo ahora"
 	echo "-l N(minutos) Reinicia el equipo dentro de los minutos indicados"
+	echo ""
 	echo "Sintaxis para reiniciar ahora: sh $0 -n"
-	echo "Sintaxis para reiniciar en 10 minutos: sh $0 -n -l 10"
+	echo "Sintaxis para reiniciar en 10 minutos: sh $0 -l 10"
 }
 
 if [ $# -eq 0 ]; then
 	ayuda
-elif [ `echo $1` = "-l" ] && [ `echo $2` = "-n" ] && [ $# -eq 3 ]; then
-	ELE=true
-	TIEMPO=$3
-	echo "Se cumple"
-elif [ `echo $1` = "-l" ]; then
-	echo "Se cumple2"
+elif [ $# -eq 1 ] && [ $1 = "-n" ]; then
+	echo "Preparando para reiniciar el equipo, pulsa cualquier tecla"
+	read input
+	shutdown -r
+elif [ $# -eq 2 ] && [ `echo $1` = "-l" ] && [ `echo $2` -gt 0 ]; then
+	TIEMPO=$2
+	shutdown -r "+$TIEMPO"
+	echo "Reinicio programado en $TIEMPO minutos"
 else
-	echo "Ninguna"
+	ayuda
 	exit 1
 fi
 
