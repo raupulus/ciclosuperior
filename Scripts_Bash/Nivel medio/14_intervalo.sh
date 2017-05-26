@@ -17,6 +17,12 @@
 INICIO=0
 FIN=0
 
+echo "Introduce el primero número (Inicio del rango)"
+read INICIO
+
+echo "Introduce el segundo número (Fin del rango)"
+read FIN
+
 if [ $INICIO -lt $FIN ]; then
 	echo "Se cumple"
 else
