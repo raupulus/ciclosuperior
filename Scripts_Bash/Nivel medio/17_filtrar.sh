@@ -14,6 +14,7 @@
 # mostrará un mensaje de error “no se procesa el argumento: <argumento>”.
 # Sólo se procesará el directorio de trabajo.
 
+TMP=""
 
 if [ $# -lt 1 ]; then
 	echo "Se necesita al menos 1 parámetro"
@@ -21,10 +22,15 @@ if [ $# -lt 1 ]; then
 fi
 
 for i in $*; do
-	if [ -f $i ]; then
-		echo "$i es un archivo"
+	TMP=`du -b arch1`
+	TMP=`echo $TMP | tr -s " " | cut -d " " -f 1`
+	
+	if [ -f $i ] && [ $TMP -ge 50 ]; then
+		echo "$i es un archivo con un tamaño de $TMP bytes"
 	elif [ -d $i ]; then
 		echo "$i es un directorio"
+	else
+		echo "Error, no se procesa el argumento: $i"
 	fi
 done
 
