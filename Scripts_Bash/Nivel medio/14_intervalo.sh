@@ -13,3 +13,13 @@
 # por los dos números. El programa debe comprobar que se pasan sólo 2
 # números y que el segundo es mayor que el primero, en caso contrario mostrar
 # mensaje de error.
+
+INICIO=0
+FIN=0
+
+if [ $INICIO -lt $FIN ]; then
+	echo "Se cumple"
+else
+	echo "No se cumplen los requisitos"
+	echo "Se necesita un segundo número mayor que el primero"
+fi
