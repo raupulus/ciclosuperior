@@ -65,14 +65,36 @@ function mover() {
 	fi
 }
 
+function renombrar() {
+	clear
+	
+	echo "Introduce el archivo a renombrar"
+	read arch1
+	
+	echo "Introduce donde renombrar"
+	read arch2
+	
+	if [ -f $arch1 ]; then
+		mv $arch1 $arch2
+		if [ ! -f $arch1 ] && [ -f $arch2 ]; then
+			echo "Se ha renombrar el archivo"
+		fi
+	else
+		echo "No se ha renombrar el archivo"
+	fi
+}
+
 while true; do
 	menu
 	read input
 	
 	case $input in
 		1) copiar;;
+		2) mover;;
+		3) renombrar;;
 		6) break;;
 		*) echo "Opción incorrecta";;
+	esac
 done
 
 exit 0
