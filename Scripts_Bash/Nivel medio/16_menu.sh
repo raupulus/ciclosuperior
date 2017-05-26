@@ -27,9 +27,26 @@ function menu() {
 	echo "Introduce una opción del menú"
 }
 
+function copiar() {
+	echo "Introduce el archivo a copiar"
+	read arch1
+	
+	echo "Introduce donde copiarlo"
+	read arch2
+	
+	if [ -f $arch1 ]; then
+		cp $arch1 $arch2
+	fi
+}
+
 while true; do
 	menu
 	read input
+	
+	case $input in
+		1) copiar;;
+		6) break;;
+		*) echo "Opción incorrecta";;
 done
 
 exit 0
