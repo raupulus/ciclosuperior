@@ -18,14 +18,25 @@
 ELE=false
 TIEMPO=""
 
-if [ `echo $1` = "-l" ] && [ `echo $2` = "-n" ] && [ $# -eq 3 ]; then
+function ayuda() {
+	echo ""
+	echo "-n Reinicia el equipo ahora"
+	echo "-l N(minutos) Reinicia el equipo dentro de los minutos indicados"
+	echo "Sintaxis para reiniciar ahora: sh $0 -n"
+	echo "Sintaxis para reiniciar en 10 minutos: sh $0 -n -l 10"
+}
+
+if [ $# -eq 0 ]; then
+	ayuda
+elif [ `echo $1` = "-l" ] && [ `echo $2` = "-n" ] && [ $# -eq 3 ]; then
 	ELE=true
 	TIEMPO=$3
 	echo "Se cumple"
-elif [ `echo $1` = "-l" ];
+elif [ `echo $1` = "-l" ]; then
 	echo "Se cumple2"
 else
 	echo "Ninguna"
+	exit 1
 fi
 
 
