@@ -28,6 +28,8 @@ function menu() {
 }
 
 function copiar() {
+	clear
+	
 	echo "Introduce el archivo a copiar"
 	read arch1
 	
@@ -41,6 +43,25 @@ function copiar() {
 		fi
 	else
 		echo "No se ha copiado el archivo"
+	fi
+}
+
+function mover() {
+	clear
+	
+	echo "Introduce el archivo a mover"
+	read arch1
+	
+	echo "Introduce donde mover"
+	read arch2
+	
+	if [ -f $arch1 ]; then
+		mv $arch1 $arch2
+		if [ ! -f $arch1 ] && [ -f $arch2 ]; then
+			echo "Se ha movido el archivo"
+		fi
+	else
+		echo "No se ha movido el archivo"
 	fi
 }
 
