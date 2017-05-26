@@ -15,6 +15,11 @@
 # 4. Borrar archivo
 # 6. Salir
 
+function continuar() {
+	echo "Pulsa cualquier tecla para continuar"
+	read toContinue
+}
+
 function menu() {
 	clear
 	echo ""
@@ -110,6 +115,7 @@ while true; do
 		1) copiar;;
 		2) mover;;
 		3) renombrar;;
+		4) borrar;;
 		6) break;;
 		*) echo "Opción incorrecta";;
 	esac
