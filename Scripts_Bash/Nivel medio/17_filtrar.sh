@@ -38,6 +38,7 @@ for i in $*; do
 		case $input in
 			s|S|y|Y) rm -R $i;;
 			*) echo "No se ha borrado $i";;
+		esac
 	else
 		echo "Error, no se procesa el argumento: $i"
 	fi
