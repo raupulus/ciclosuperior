@@ -26,10 +26,18 @@ fi
 for i in $*; do
 	TMP=`du -b $i`
 	TMP=`echo $TMP | tr -s " " | cut -d " " -f 1`
+	
 	if [ -f $i ] && [ `echo $TMP` -gt 50 ]; then
 		echo "$i es un archivo con un tamaño de $TMP bytes"
+		rm $i
 	elif [ -d $i ]; then
-		echo "$i es un directorio, desea borrarlo [s/n]"
+		echo "$i es un directorio, desea borrarlo [s/n] no por omisión"
+		
+		read input
+		
+		case $input in
+			s|S|y|Y) rm -R $i;;
+			*) echo "No se ha borrado $i";;
 	else
 		echo "Error, no se procesa el argumento: $i"
 	fi
