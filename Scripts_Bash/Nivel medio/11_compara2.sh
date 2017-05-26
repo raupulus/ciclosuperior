@@ -14,3 +14,16 @@
 # nombre de todos ellos. La opción –l de esta orden sirve para que muestre
 # en la salida estándar el número de líneas del fichero que se pase como
 # parámetro, junto con su nombre.
+
+MAYOR=`echo $1`
+
+for i in $*; do
+	echo $i
+	if [ `wc -l $i | cut -d " " -f1` -gt `wc -l $MAYOR | cut -d " " -f1` ]; then
+		MAYOR=$i
+	fi
+done
+
+echo "El archivo mayor es: $MAYOR con un total de `wc -l $MAYOR | cut -d " " -f1` Líneas"
+
+exit 0
