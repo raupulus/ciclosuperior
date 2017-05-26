@@ -71,7 +71,7 @@ function renombrar() {
 	echo "Introduce el archivo a renombrar"
 	read arch1
 	
-	echo "Introduce donde renombrar"
+	echo "Introduce el nuevo nombre"
 	read arch2
 	
 	if [ -f $arch1 ]; then
@@ -81,6 +81,24 @@ function renombrar() {
 		fi
 	else
 		echo "No se ha renombrar el archivo"
+	fi
+}
+
+function borrar() {
+	clear
+	
+	echo "Introduce el archivo a borrar"
+	read arch1
+	
+	if [ -f $arch1 ]; then
+		rm $arch1
+		if [ ! -f $arch1 ]; then
+			echo "Se ha borrado el archivo"
+		else
+			echo "No se ha conseguido borrar el archivo"
+		fi
+	else
+		echo "No se ha borrado el archivo"
 	fi
 }
 
