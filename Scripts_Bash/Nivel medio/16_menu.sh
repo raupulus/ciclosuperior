@@ -36,6 +36,11 @@ function copiar() {
 	
 	if [ -f $arch1 ]; then
 		cp $arch1 $arch2
+		if [ -f $arch2 ]; then
+			echo "Se ha copiado el archivo"
+		fi
+	else
+		echo "No se ha copiado el archivo"
 	fi
 }
 
