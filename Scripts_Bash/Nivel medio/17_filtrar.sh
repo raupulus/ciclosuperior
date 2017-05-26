@@ -20,6 +20,13 @@ if [ $# -lt 1 ]; then
 	exit 1
 fi
 
+for i in $*; do
+	if [ -f $i ]; then
+		echo "$i es un archivo"
+	elif [ -d $i ]; then
+		echo "$i es un directorio"
+	fi
+done
 
 
 exit 0
