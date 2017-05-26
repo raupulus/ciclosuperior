@@ -15,4 +15,11 @@
 # Sólo se procesará el directorio de trabajo.
 
 
+if [ $# -lt 1 ]; then
+	echo "Se necesita al menos 1 parámetro"
+	exit 1
+fi
 
+
+
+exit 0
