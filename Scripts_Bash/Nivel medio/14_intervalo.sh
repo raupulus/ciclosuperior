@@ -24,7 +24,9 @@ echo "Introduce el segundo número (Fin del rango)"
 read FIN
 
 if [ $INICIO -lt $FIN ]; then
-	echo "Se cumple"
+	clear
+	echo "Mostrando rango"
+	seq $INICIO $FIN
 else
 	echo "No se cumplen los requisitos"
 	echo "Se necesita un segundo número mayor que el primero"
